@@ -1,3 +1,7 @@
+/**
+Created on Fri Jul  5 21:55:04 2019
+@author: TANVIR
+**/
 #include<iostream>
 using namespace std;
 class Perceptron{
