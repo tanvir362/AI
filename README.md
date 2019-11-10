@@ -15,5 +15,16 @@ RosenblattPerceptron.cpp:
   1.	Perceptron class with constructor
   2.	Private fields: weights, bias, learning rate
   3.	Public methods: update,  training, test 
+  4.	Solve AND, OR problem
+
+BackPropagationLab.cpp:
+  1.	Node(perceptron) class with constructor
+      •	Fields: weights, bias 
+      •	Methods: net calculate, activation(sigmoid)
+  2.	BackPropagation class, constructor creates necessary perceptron for the network
+      •	Methods:
+        Training: creates network using previously created perceptrons, find errors and updates
+        Update: Updates every nodes weights and bias
+        Test: find output of the network y from given input x1 and x2
 
 
