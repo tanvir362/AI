@@ -27,4 +27,21 @@ BackPropagationLab.cpp:
         Update: Updates every nodes weights and bias
         Test: find output of the network y from given input x1 and x2
 
+statistical_analysis_HCV-Egy-Data.ipynb:
+  1.	Statistical analysis(correlation, mean, median, percentile, standard deviation, outlier, etc)
+  2.	Find feature attributes correlation with class attribute
+  3.	Top 5 feature attribute selection with maximum correlation with class attribute
+  4.	Box plot to detect outlier
+  5.	Dropping rows contains outlier
+  6.	Parallel coordinate plotting
+
+pca_knn_iris.ipynb:
+  1.	Load csv data and set columns name
+  2.	Separating features and target(using drop)
+  3.	Idea about axis of dataset
+  4.	Splitting train and test set
+  5.	Applying k-nearest neighbors (KNN)
+  6.	PCA analysis
+  7.	Evaluation(accuracy)
+
 
