@@ -1,4 +1,4 @@
-File and folder contents I used and need to remember:
+File and folder contents:
 
 TitanicDisaster:
   1.	Dropping non-numeric columns
