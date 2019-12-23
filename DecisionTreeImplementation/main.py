@@ -1,6 +1,6 @@
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-from sklearn import metrics
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
 import pandas as pd
 import numpy as np
 
@@ -20,9 +20,29 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
 tree1 = DecisionTreeClassifier(criterion="entropy", random_state=42)
 tree1.fit(x_train,y_train)
 
-#model evalustion
+#model evalustion before pruning
+print("Model evaluation before pre pruning:\n")
 y_pred = tree1.predict(x_test)
-print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+conf_metrix = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix: \n", conf_metrix)
+print("Accuracy : ", accuracy_score(y_test, y_pred) * 100)
+print("Report : \n", classification_report(y_test, y_pred))
+
+#train model using decision tree with pre pruning
+tree2 = DecisionTreeClassifier(criterion="entropy", max_depth=3, min_samples_leaf=5, max_leaf_nodes=5)
+tree2.fit(x_train, y_train)
+
+#train model using decision tree with pre pruning
+tree2 = DecisionTreeClassifier(criterion="entropy", random_state=42)
+tree2.fit(x_train,y_train)
+
+#model evalustion after pruning
+print("\n\nModel evaluation after pre pruning:\n")
+y_pred = tree2.predict(x_test)
+conf_metrix = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix: \n", conf_metrix)
+print("Accuracy : ", accuracy_score(y_test, y_pred) * 100)
+print("Report : \n", classification_report(y_test, y_pred))
 
 
 
