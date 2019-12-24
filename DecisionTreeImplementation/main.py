@@ -7,6 +7,7 @@ import numpy as np
 #load data
 data = pd.read_csv("iris.csv", header=None)
 data.columns = ['sepal length', 'sepal width', 'petal length', 'petal width', 'class']
+print("Snapshot of data set\n")
 print(data.head())
 
 #separating features and target
